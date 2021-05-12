@@ -5,12 +5,12 @@ This Python project will read data in JSON format and create a binary ML system.
 ## About the Data
 
 The RawData.json file contains samples of Yelp restaurant review in JSON format. The JSON file contains JSON objects ‘RestaurantInfo’ and ‘Reviews’. In the ‘RestaurantInfo’ object, it contains the basic information of the restaurant (Address, ImgURL, Name etc.). In the ‘Reviews’ object, there are 1445 different reviews on this restaurant. The JSON object ‘Reviews’ is defined as the following:  
-&emsp;• Author: name of the reviewer  
-&emsp;• Author_Location: location of the reviewer  
-&emsp;• Content: review  
-&emsp;• Date: date when the review was registered  
-&emsp;• Overall: rating of the restaurant in numerical format  
-&emsp;• ReviewID: system ID for the review  
+&emsp;&emsp;• Author: name of the reviewer  
+&emsp;&emsp;• Author_Location: location of the reviewer  
+&emsp;&emsp;• Content: review  
+&emsp;&emsp;• Date: date when the review was registered  
+&emsp;&emsp;• Overall: rating of the restaurant in numerical format  
+&emsp;&emsp;• ReviewID: system ID for the review  
   
 ## Implementation Details
 
@@ -42,8 +42,8 @@ P ( w | y = 1) represents the conditional probability that given the positive la
 P ( w | y = 0) represents the conditional probability that given the negative label, word w occurs in the reviews.  
 
 Considering all 1445 reviews as a single training set, we us the following classifier to predict the class label for the review:  
-&emsp;• f(X) = log( P(y=1) / P(y=0) ) +  ∑ ( log( P(w | y=1) ) – log( P(w | y=0) ) )    (sum over w)  
-&emsp;• Predicted class label y = 1 if f(X) ≥ 0, otherwise y = 0. 	
+&emsp;&emsp;• f(X) = log( P(y=1) / P(y=0) ) +  ∑ ( log( P(w | y=1) ) – log( P(w | y=0) ) )    (sum over w)  
+&emsp;&emsp;• Predicted class label y = 1 if f(X) ≥ 0, otherwise y = 0. 	
     
 The new review being considered in the program is as follows:
 
