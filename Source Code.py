@@ -5,12 +5,12 @@ import re
 import numpy as np
 
 # Global Constants
-Q1_json_file = 'Question1.json'
+Q1_json_file = 'RawData.json'
 csv_name = 'Reviews.csv'
 
 # a)
 
-# This function reads in the Question1.json file and exports the 'Reviews' 
+# This function reads in the RawData.json file and exports the 'Reviews' 
 # object as a .csv file named 'Reviews.csv' with the desired format 
 
 def read_json(json_file, csv_out):
@@ -136,6 +136,7 @@ find_top_ten(csv_name)
 
 # d)
 
+# Sample Review
 Ex_Review = """Maybe the high expectations but really the food was ok.Best dishes 
             were liver with jelly and eggplant casserole.Other than that it was 
             bbq with a little twist.Just for the food I would have given 3 stars 
@@ -219,7 +220,7 @@ print(evaluate_review(csv_name, Ex_Review))
 # e)
 
 # This function returns true if Reviews with an overall rating of 3 should be 
-# positive and false otherwise.
+# considered positive and false if they should be considered negative.
 
 def should_3_be_positive(csv_in):
     Reviews_df = pd.read_csv(csv_in)
