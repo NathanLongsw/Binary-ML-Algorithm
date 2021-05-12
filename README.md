@@ -42,8 +42,8 @@ $P ( w \mid y = 1)$ represents the conditional probability that given the positi
 $P ( w \mid y = 0)$ represents the conditional probability that given the negative label, word w occurs in the reviews.  
 
 Considering all 1445 reviews as a single training set, we us the following classifier to predict the class label for the review:
-  • f (X) = $\log(P(y=1)/P(y=0))$ + $$\sum_w$$ ( $\log(P(w \mid y=1))$ – $\log(P(w \mid y=0))$
-  • Predicted class label $y = 1 $ if $f(X) ≥ 0$ , otherwise $y = 0 $
+  • f (X) = $\log(P(y=1)/P(y=0))$ + $\sum_{w}$ ( $\log(P(w \mid y=1))$ – $\log(P(w \mid y=0))$ )
+  • Predicted class label $y \equiv 1 $ if $f(X) ≥ 0$ , otherwise $y \equiv 0 $
   
 The new review being considered in the program is as follows:
 
