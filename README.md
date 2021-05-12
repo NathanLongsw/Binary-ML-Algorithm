@@ -38,8 +38,8 @@ For this section we must first establish some definitions.
 
 Let w represent a word in the review documents and y represent the class label created in section B. This function consumes the data in RawData.json as a training set and a review as a string. It predicts if a given review should be considered as positive or negative based off of the training set. The calculation is described in detail below.
 
-P ( w \mid y = 1) represents the conditional probability that given the positive label, word w occurs in the reviews.  
-P ( w \mid y = 0) represents the conditional probability that given the negative label, word w occurs in the reviews.  
+$P ( w \mid y = 1)$ represents the conditional probability that given the positive label, word w occurs in the reviews.  
+$P ( w \mid y = 0)$ represents the conditional probability that given the negative label, word w occurs in the reviews.  
 
 Considering all 1445 reviews as a single training set, we us the following classifier to predict the class label for the review:
   • f (X) = $\log(P(y=1)/P(y=0))$ + $$\sum_w$$ ( $\log(P(w \mid y=1))$ – $\log(P(w \mid y=0))$
